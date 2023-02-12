@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Give money calculator</title>
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="head1">โปรแกรมคำนวณ</h1>
+      <h2 class="head2">ซองนี้ใส่กี่บาท ?</h2>
+      <!-- เปลี่ยน นี้ เป็นชื่อซอง -->
+      <form>
+        <label for="event">งานสำคัญ</label>
+        <select id="event" name="event">
+          <option value="op1">งานแต่งงาน</option>
+          <option value="op2">งานบวช</option>
+          <option value="op3">งานศพ</option>
+          <option value="op4">งานทอดผ้าป่า</option>
+          <option value="op5">งานทำบุญใหญ่</option>
+          <option value="op6">งานทำบุญขึ้นบ้านใหม่</option>
+          <option value="op7">งานรับปริญญา</option>
+        </select>
+
+        <div class="important">
+          <h3>ความสำคัญของบุคคลที่ให้</h3>
+          <input type="radio" id="very" name="important" value="very" />
+          <label for="very">มาก</label>
+          <input type="radio" id="mid" name="important" value="mid" />
+          <label for="mid">ปานกลาง</label>
+          <input type="radio" id="less" name="important" value="less" />
+          <label for="less">น้อย</label>
+        </div>
+
+        <div class="join">
+          <h3>ไปร่วมงานหรือไม่</h3>
+          <input type="radio" id="join" name="important" value="less" />
+          <label for="join">ไป</label>
+          <input type="radio" id="notJoin" name="important" value="less" />
+          <label for="notJoin">ไม่ไป</label>
+        </div>
+
+        <div class="income">
+          <label for="income">รายได้: </label>
+          <input type="text" id="income" name="income" /> บาท/เดือน
+        </div>
+      </form>
+
+      <div class="result">
+        <h1 id="preResult">????</h1>
+        <button id="clickToResult">คำนวณ</button>
+      </div>
+    </div>
+  </body>
+</html>

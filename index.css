@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200&display=swap');
+html {
+    font-family: 'Mitr', sans-serif;
+}
+
+body {
+    background-color: rgba(7, 7, 84, 0.394);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.head1 {
+    font-size: 60px;
+    font-weight: 900;
+    margin: 50px 0 10px 0;
+}
+
+.head2 {
+    font-size: 46px;
+    font-weight: 700;
+    margin: 5px 0 30px 0;
+    font-style: oblique;
+}
