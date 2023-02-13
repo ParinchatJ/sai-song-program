@@ -14,43 +14,45 @@
       <h2 class="head2">ซองนี้ใส่กี่บาท ?</h2>
       <!-- เปลี่ยน นี้ เป็นชื่อซอง -->
       <form>
-        <label for="event">งานสำคัญ</label>
-        <select id="event" name="event">
-          <option value="op1">งานแต่งงาน</option>
-          <option value="op2">งานบวช</option>
-          <option value="op3">งานศพ</option>
-          <option value="op4">งานทอดผ้าป่า</option>
-          <option value="op5">งานทำบุญใหญ่</option>
-          <option value="op6">งานทำบุญขึ้นบ้านใหม่</option>
-          <option value="op7">งานรับปริญญา</option>
-        </select>
-
-        <div class="important">
-          <h3>ความสำคัญของบุคคลที่ให้</h3>
-          <input type="radio" id="very" name="important" value="very" />
-          <label for="very">มาก</label>
-          <input type="radio" id="mid" name="important" value="mid" />
-          <label for="mid">ปานกลาง</label>
-          <input type="radio" id="less" name="important" value="less" />
-          <label for="less">น้อย</label>
+        <div class="con-event">
+          <label class="event" for="event">งานสำคัญ</label>
+          <select id="event" name="event">
+            <option value="op1">งานแต่งงาน</option>
+            <option value="op2">งานบวช</option>
+            <option value="op3">งานศพ</option>
+            <option value="op4">งานทอดผ้าป่า</option>
+            <option value="op5">งานทำบุญใหญ่</option>
+            <option value="op6">งานทำบุญขึ้นบ้านใหม่</option>
+            <option value="op7">งานรับปริญญา</option>
+          </select>
         </div>
 
-        <div class="join">
-          <h3>ไปร่วมงานหรือไม่</h3>
-          <input type="radio" id="join" name="important" value="less" />
-          <label for="join">ไป</label>
-          <input type="radio" id="notJoin" name="important" value="less" />
-          <label for="notJoin">ไม่ไป</label>
+        <div class="con-important">
+          <label class="important" for="important">ความสำคัญ</label>
+          <select id="important" name="important">
+            <option value="op1">มาก</option>
+            <option value="op2">ปานกลาง</option>
+            <option value="op3">น้อย</option>
+          </select>
         </div>
 
-        <div class="income">
-          <label for="income">รายได้: </label>
-          <input type="text" id="income" name="income" /> บาท/เดือน
+        <div class="con-join">
+            <label class="join" for="join">ไปร่วมงานหรือไม่</label>
+          <select id="join" name="join">
+            <option value="op1">ไปร่วมงาน</option>
+            <option value="op2">ไม่ไปร่วมงาน</option>
+            <option value="op3">มีตัวแทนไปร่วมงาน</option>
+          </select>
+        </div>
+
+        <div class="con-income">
+          <label class="income" for="income">รายได้ </label>
+          <input type="text" id="income" name="income" value="บาท/เดือน" />
         </div>
       </form>
 
       <div class="result">
-        <h1 id="preResult">????</h1>
+        <h1 id="preResult">???? บาท</h1>
         <button id="clickToResult">คำนวณ</button>
       </div>
     </div>
