@@ -98,15 +98,19 @@ form {
     flex-direction: column;
 }
 
-#preResult {
-    margin-bottom: 50px;
-    font-size: 45px;
-    font-style: oblique;
-    text-align: center;
-
+.con-result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 50px;
     border: 2px solid black;
-    height: 70px;
+    height: 100px;
     width: 500px;
+}
+
+#preResult, #preResultBaht {
+    font-size: 50px;
+    margin-right: 10px;
 }
 
 #clickToResult {
