@@ -17,31 +17,36 @@
         <div class="con-event">
           <label class="event" for="event">งานสำคัญ</label>
           <select id="event" name="event">
-            <option value="op1">งานแต่งงาน</option>
-            <option value="op2">งานบวช</option>
-            <option value="op3">งานศพ</option>
-            <option value="op4">งานทอดผ้าป่า</option>
-            <option value="op5">งานทำบุญใหญ่</option>
-            <option value="op6">งานทำบุญขึ้นบ้านใหม่</option>
-            <option value="op7">งานรับปริญญา</option>
+            <option value="" selected disabled hidden>โปรดเลือก</option>
+            <option class="eventOp" value="งานแต่งงาน">งานแต่งงาน</option>
+            <option class="eventOp" value="งานบวช">งานบวช</option>
+            <option class="eventOp" value="งานศพ">งานศพ</option>
+            <option class="eventOp" value="งานทอดผ้าป่า">งานทอดผ้าป่า</option>
+            <option class="eventOp" value="งานทำบุญใหญ่">งานทำบุญใหญ่</option>
+            <option class="eventOp" value="งานทำบุญขึ้นบ้านใหม่">
+              งานทำบุญขึ้นบ้านใหม่
+            </option>
+            <option class="eventOp" value="งานรับปริญญา">งานรับปริญญา</option>
           </select>
         </div>
 
         <div class="con-important">
           <label class="important" for="important">ความสำคัญ</label>
           <select id="important" name="important">
-            <option value="op1">มาก</option>
-            <option value="op2">ปานกลาง</option>
-            <option value="op3">น้อย</option>
+            <option value="" selected disabled hidden>โปรดเลือก</option>
+            <option class="imporOp" value="มาก">มาก</option>
+            <option class="imporOp" value="ปานกลาง">ปานกลาง</option>
+            <option class="imporOp" value="น้อย">น้อย</option>
           </select>
         </div>
 
         <div class="con-join">
-            <label class="join" for="join">ไปร่วมงานหรือไม่</label>
+          <label class="join" for="join">ไปร่วมงานหรือไม่</label>
           <select id="join" name="join">
-            <option value="op1">ไปร่วมงาน</option>
-            <option value="op2">ไม่ไปร่วมงาน</option>
-            <option value="op3">มีตัวแทนไปร่วมงาน</option>
+            <option value="" selected disabled hidden>โปรดเลือก</option>
+            <option value="ไปร่วมงาน">ไปร่วมงาน</option>
+            <option value="ไม่ไปร่วมงาน">ไม่ไปร่วมงาน</option>
+            <option value="มีตัวแทนไปร่วมงาน">มีตัวแทนไปร่วมงาน</option>
           </select>
         </div>
 
@@ -49,15 +54,15 @@
           <label class="income" for="income">รายได้ </label>
           <input type="text" id="income" name="income" value="บาท/เดือน" />
         </div>
-      </form>
 
-      <div class="result">
-        <div class="con-result">
+        <div class="result">
+          <div class="con-result">
             <h1 id="preResult">????</h1>
             <h1 id="preResultBaht">บาท</h1>
+          </div>
+          <button id="clickResult" type="submit">คำนวณ</button>
         </div>
-        <button id="clickToResult">คำนวณ</button>
-      </div>
+      </form>
     </div>
   </body>
 </html>
