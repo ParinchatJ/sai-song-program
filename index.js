@@ -1,3 +1,4 @@
+
 let form = document.querySelector("form");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -79,34 +80,36 @@ form.addEventListener("submit", (event) => {
     case 9:
       saiSong = "100";
       break;
-    case 10 && 11:
+    case 10 || 11:
       saiSong = "250";
       break;
-    case 12 && 13:
+    case 12 || 13:
       saiSong = "300";
       break;
-    case 14 && 15:
+    case 14 || 15:
       saiSong = "500";
       break;
-    case 16 && 17:
+    case 16 || 17:
       saiSong = "800";
       break;
-    case 18 && 19:
+    case 18 || 19:
       saiSong = "1000";
       break;
   }
 
-  document.getElementById("preResult").innerText = saiSong;
+//   console.log(saiSong)
 
   //   Validate form
   if (
     getEventPoint == "" ||
     getImportantPoint == "" ||
-    typeof getIncomePoint !== 'number' ||
+    typeof getIncomePoint !== "number" ||
+    getIncomePoint == "" ||
     getJoinPoint == ""
   ) {
     document.getElementById("preResultBaht").innerText = "กรุณาใส่ข้อมูลให้ครบ";
+    alert('กรุณากดรีเฟรชหน้าต่างของคุณ')
   } else {
-    console.log('ERROR!')
+    document.getElementById("preResult").innerText = saiSong;
   }
 });
