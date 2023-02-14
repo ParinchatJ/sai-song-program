@@ -74,27 +74,39 @@ form.addEventListener("submit", (event) => {
   let saiSong;
   switch (totalPoint) {
     case 8:
-      saiSong = '50';
+      saiSong = "50";
       break;
     case 9:
-      saiSong = '100';
+      saiSong = "100";
       break;
     case 10 && 11:
-      saiSong = '250';
+      saiSong = "250";
       break;
     case 12 && 13:
-      saiSong = '300';
+      saiSong = "300";
       break;
     case 14 && 15:
-      saiSong = '500';
+      saiSong = "500";
       break;
     case 16 && 17:
-      saiSong = '800';
+      saiSong = "800";
       break;
     case 18 && 19:
-      saiSong = '1000';
+      saiSong = "1000";
       break;
   }
 
-  document.getElementById("preResult").innerText = saiSong
+  document.getElementById("preResult").innerText = saiSong;
+
+  //   Validate form
+  if (
+    getEventPoint == "" ||
+    getImportantPoint == "" ||
+    typeof getIncomePoint !== 'number' ||
+    getJoinPoint == ""
+  ) {
+    document.getElementById("preResultBaht").innerText = "กรุณาใส่ข้อมูลให้ครบ";
+  } else {
+    console.log('ERROR!')
+  }
 });
