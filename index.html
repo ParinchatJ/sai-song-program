@@ -17,7 +17,7 @@
       <form>
         <div class="con-event">
           <label class="event" for="event">งานสำคัญ</label>
-          <select id="event" name="event">
+          <select id="event" name="event" required>
             <option value="" selected disabled hidden>โปรดเลือก</option>
             <option class="eventOp" value="งานแต่งงาน">งานแต่งงาน</option>
             <option class="eventOp" value="งานบวช">งานบวช</option>
@@ -33,7 +33,7 @@
 
         <div class="con-important">
           <label class="important" for="important">ความสำคัญ</label>
-          <select id="important" name="important">
+          <select id="important" name="important" required>
             <option value="" selected disabled hidden>โปรดเลือก</option>
             <option class="imporOp" value="มาก">มาก</option>
             <option class="imporOp" value="ปานกลาง">ปานกลาง</option>
@@ -43,7 +43,7 @@
 
         <div class="con-join">
           <label class="join" for="join">ไปร่วมงานหรือไม่</label>
-          <select id="join" name="join">
+          <select id="join" name="join" required>
             <option value="" selected disabled hidden>โปรดเลือก</option>
             <option value="ไปร่วมงาน">ไปร่วมงาน</option>
             <option value="ไม่ไปร่วมงาน">ไม่ไปร่วมงาน</option>
@@ -53,7 +53,13 @@
 
         <div class="con-income">
           <label class="income" for="income">รายได้ </label>
-          <input type="text" id="income" name="income" value="บาท/เดือน" />
+          <input
+            type="text"
+            id="income"
+            name="income"
+            required
+            placeholder="บาท/เดือน"
+          />
         </div>
 
         <div class="result">

@@ -1,4 +1,3 @@
-
 let form = document.querySelector("form");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -59,7 +58,7 @@ form.addEventListener("submit", (event) => {
   }
 
   // Get income point
-  let getIncomePoint = el.querySelector(".con-income #income").value;
+  let getIncomePoint = Number(el.querySelector(".con-income #income").value);
 
   if (getIncomePoint <= 15000) {
     totalPoint += 1;
@@ -72,43 +71,54 @@ form.addEventListener("submit", (event) => {
   console.log(totalPoint);
 
   // Display result
-  let saiSong;
+  let saiSong = 0;
   switch (totalPoint) {
     case 8:
-      saiSong = "50";
+      saiSong += 50;
       break;
     case 9:
-      saiSong = "100";
+      saiSong += 100;
       break;
-    case 10 || 11:
-      saiSong = "250";
+    case 10:
+      saiSong += 250;
       break;
-    case 12 || 13:
-      saiSong = "300";
+    case 11:
+      saiSong += 270;
       break;
-    case 14 || 15:
-      saiSong = "500";
+    case 12:
+      saiSong += 300;
       break;
-    case 16 || 17:
-      saiSong = "800";
+    case 13:
+      saiSong += 400;
       break;
-    case 18 || 19:
-      saiSong = "1000";
+    case 14:
+      saiSong += 500;
+      break;
+    case 15:
+      saiSong += 600;
+      break;
+    case 16:
+      saiSong += 800;
+      break;
+    case 17:
+      saiSong += 900;
+      break;
+    case 18:
+      saiSong += 1000;
+      break;
+    case 19:
+      saiSong += 1200;
       break;
   }
 
-//   console.log(saiSong)
+  // console.log(typeof saiSong);
+  // console.log(saiSong);
 
-  //   Validate form
-  if (
-    getEventPoint == "" ||
-    getImportantPoint == "" ||
-    typeof getIncomePoint !== "number" ||
-    getIncomePoint == "" ||
-    getJoinPoint == ""
-  ) {
-    document.getElementById("preResultBaht").innerText = "กรุณาใส่ข้อมูลให้ครบ";
-    alert('กรุณากดรีเฟรชหน้าต่างของคุณ')
+  // Validate form
+  if (typeof getIncomePoint !== "number" || getIncomePoint == "") {
+    document.getElementById("preResultBaht").innerText =
+      "กรุณากรอกข้อมูลให้ครบ";
+    alert("กรุณากดรีเฟรชหน้าต่างของคุณ");
   } else {
     document.getElementById("preResult").innerText = saiSong;
   }
